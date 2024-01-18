@@ -18,7 +18,7 @@ const Sidebar = () => {
           className={`option ${
             selectedOption === "contrataciones" ? "selected" : ""
           }`}
-          onClick={() => handleOptionClick("Modalidad")}
+          onClick={() => handleOptionClick("contrataciones")}
         >
           <FaChartBar /> Contrataciones
         </Link>

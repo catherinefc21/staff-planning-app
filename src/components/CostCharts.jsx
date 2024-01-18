@@ -11,7 +11,6 @@ function CostCharts() {
         const cost_data = await readCSVFile(
           "/test_output_planning_monthly.csv"
         );
-        console.log("cost_data:", cost_data);
         setCostData(cost_data);
       } catch (error) {
         console.error("Error al cargar datos:", error);

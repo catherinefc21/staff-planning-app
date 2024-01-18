@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import readCSVFile from "./FileReader";
-import { Chart as ChartJS, defaults } from "chart.js/auto";
+import readCSVFile from "../utils/FileReader";
 import CustomBarChart from "./CustomBarChart";
 
 function ContractCharts() {
@@ -50,12 +49,11 @@ function ContractCharts() {
   const store23x4 = store2.filter(
     (data) => data.nombre == "TEST 3X4 PART TIME"
   );
-
+  console.log(store23x4);
   // tienda 2: PICK TIME
   const store2PickTime = store2.filter(
     (data) => data.nombre == "TEST PICK TIME"
   );
-
   return (
     <>
       <div className='select-store'>

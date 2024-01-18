@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaChartBar, FaCog, FaStore, FaMoneyBillAlt } from "react-icons/fa";
+import { FaChartBar, FaCog, FaChartLine, FaMoneyBillAlt } from "react-icons/fa";
 import { MdPerson } from "react-icons/md";
 
 const Sidebar = () => {
@@ -16,11 +16,11 @@ const Sidebar = () => {
         <Link
           to='/contrataciones-modalidad'
           className={`option ${
-            selectedOption === "Modalidad" ? "selected" : ""
+            selectedOption === "contrataciones" ? "selected" : ""
           }`}
           onClick={() => handleOptionClick("Modalidad")}
         >
-          <FaChartBar /> Gestión de personas
+          <FaChartBar /> Contrataciones
         </Link>
 
         <Link
@@ -28,11 +28,11 @@ const Sidebar = () => {
           className={`option ${selectedOption === "Costos" ? "selected" : ""}`}
           onClick={() => handleOptionClick("Costos")}
         >
-          <FaMoneyBillAlt /> Costos
+          <FaMoneyBillAlt /> Costos dotación
         </Link>
 
         <Link>
-          <FaStore /> Tiendas
+          <FaChartLine /> Otros indicadores
         </Link>
       </div>
 

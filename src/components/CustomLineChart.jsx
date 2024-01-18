@@ -1,11 +1,11 @@
 import React from "react";
-import { Bar } from "react-chartjs-2";
+import { Line } from "react-chartjs-2";
 import {
   Chart as ChartJS,
   CategoryScale,
   LinearScale,
   PointElement,
-  BarElement,
+  LineElement,
   Title,
   Tooltip,
   Legend,
@@ -16,29 +16,31 @@ ChartJS.register(
   CategoryScale,
   LinearScale,
   PointElement,
-  BarElement,
+  LineElement,
   Title,
   Tooltip,
   Legend,
   Filler
 );
 
-function CustomBarChart({ title, labels, data1, data2 }) {
+function CustomLineChart({ title, labels, data1, data2 }) {
   return (
     <div className='data-card'>
-      <Bar
+      <Line
         data={{
           labels: labels,
           datasets: [
             {
-              label: "Contratación según SP",
+              label: "Costo dotación según SP",
               data: data1,
-              backgroundColor: ["rgba(64, 196, 196, 0.527)"],
+              borderColor: ["rgba(64, 196, 196, 0.527)"],
+              pointBackgroundColor: ["rgba(64, 196, 196, 0.527)"],
             },
             {
-              label: "Contratación real",
+              label: "Costo dotación real",
               data: data2,
-              backgroundColor: ["rgba(155, 34, 139, 0.425)"],
+              borderColor: ["rgba(155, 34, 139, 0.425)"],
+              pointBackgroundColor: ["rgba(155, 34, 139, 0.425)"],
             },
           ],
         }}
@@ -79,4 +81,4 @@ function CustomBarChart({ title, labels, data1, data2 }) {
   );
 }
 
-export default CustomBarChart;
+export default CustomLineChart;

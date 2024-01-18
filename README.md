@@ -1,1 +1,4 @@
-Este proyecto utiliza ReactJS junto con la biblioteca Chart.js que incluye la integración de gráficas responsivas con ChartJS.
+# Staff-planning
+
+Este proyecto utiliza [ReactJS](https://reactjs.org/) junto con la biblioteca [Chart.js](https://www.chartjs.org/) que incluye la integración de gráficas responsivas con ChartJS.
+

@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+body {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-color: #eef0f3;
+  margin: 0; 
+}
+
+.sidebar {
+  width: 200px;
+  height: 100vh;
+  background-color: #1a2345;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 18px;
+  justify-content: space-between;
+  position: fixed;
+}
+
+.navbar {
+  background-color: #1a2345;
+  padding: 1rem 2rem;
+  border-bottom: 1.5px solid #c4ccde;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  text-align: left;
+  z-index: 1;
+}
+
+.options {
+  margin-top: 60px;
+}
+
+.options a,
+.config-cuenta-container a {
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+}
+
+.options a:hover,
+.config-cuenta-container a:hover,
+.options a.selected,
+.selected {
+  background-color: #314159;
+}
+
+svg {
+  margin-right: 10px;
+}
+
+.title {
+  text-align: center;
+}
+
+.main-content {
+  margin-left: 200px; 
+  padding: 70px 20px 20px 20px; 
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.work-mode-charts {
+  width: 100%; 
+  height: auto;
+  margin-top: 20px; 
+  padding: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around
+}
+.data-card{
+  width: 480px;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  background-color: #fff;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+.select-store{
+  display: flex;
+  align-self: center;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.select-store select {
+  width: 200px; 
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  margin-left: 10px;
+}
+
+.select-store option {
+  font-size: 14px;
+}
+
+/* Estilos para pantallas pequeñas (600px o menos) */
+
+@media screen and (max-width: 600px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    position: static;
+  }
+
+  .navbar {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .options,
+  .config-cuenta-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .options a,
+  .config-cuenta-container a {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 20px;
+  }
+}
+@media screen and (min-width: 600px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .navbar {
+    padding: 1rem 2rem;
+    font-size: 20px;
+  }
+
+  .main-content {
+    margin-left: 200px;
+    padding: 70px 20px 20px 20px;
+  }
+}
